@@ -1,0 +1,386 @@
+
+
+ 
+ 
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><h2>
+  
+  Doc Drop Translator</h2> <h3>Created by Andrew Rollin Davis, MD</h3> </p>
+<p> Please specify drop or medication followed by frequency (or dose then frequency if medication) and route (OD,OS,OU,PO,Subcut)
+  </p>
+  <p>
+    <h5>
+      Version 3.1 updated 9/23/19
+  </h5>
+  </p>
+
+<button onclick="myFunction()">Click to enter your Doctor's instructions</button>
+
+
+  <p id="drops1"><br><br><br><br><br><br><h1><u>Your Medications</u>
+  
+  </h1></p><p id="drops2"></p><p id="demo"></p>
+  
+ 
+  
+  
+<script>
+    
+
+function myFunction() {
+  var drops = prompt("Enter Drop Schedule", " Vigamox TID,Durezol BID");
+  if (drops != null) {
+    
+    var n;
+    var i;
+    /*
+    document.getElementById("demo").innerHTML =
+    "Hello " + person + "! How are you today?";*/
+    
+    /*inputed drops from user, now go through logic steps*/
+    
+
+      var n = drops;
+      var n = " " + n;
+       var n = n + " " ;
+     document.getElementById("drops1").innerHTML = drops;
+    
+    
+   for(i=0;i<=10;i++) /* put up top to prevent interference with other code*/
+    { /*END OF FILE, DELETE THIS LINE */
+ 
+ /* output.txt  */
+ 
+
+ 
+ /* Abbreviations/Routes.txt  */
+ 
+var n = n.replace(' OU', ' Both Eyes ');
+var n = n.replace(' OD', ' Right Eye ');
+var n = n.replace(' OS', ' Left eye ');
+var n = n.replace(' PO', ' By Mouth ');
+var n = n.replace(' SUBQ', ' Subcutaneous injection ');
+var n = n.replace(' ou', ' Both Eyes ');
+var n = n.replace(' od', ' Right Eye ');
+var n = n.replace(' os', ' Left eye ');
+var n = n.replace(' po', ' By Mouth ');
+var n = n.replace(' subq', ' Subcutaneous injection ');
+ 
+ /* Abbreviations/Steroids.txt  */
+ 
+var n = n.replace(' Difluprednate ', ' <h1 style="color:Pink;"><p> Durezol-(Difluprednate, Pink) ');
+var n = n.replace(' Durezol ', ' <h1 style="color:Pink;"><p> Durezol-(Difluprednate, Pink) ');
+var n = n.replace(' Dexamethasone ', ' <h1><p>Dexamethasone-(Compounded) ');
+var n = n.replace(' Fluorometholone ', ' <h1 style="color:Pink;"><p> Fluorometholone-(Pink) ');
+var n = n.replace(' FML ', ' <h1 style="color:Pink;"><p> Fluorometholone-(Pink) ');
+var n = n.replace(' Loteprednol ', ' <h1 style="color:Pink;"><p> Loteprednol-(Pink) ');
+var n = n.replace(' Lotemax ', ' <h1 style="color:Pink;"><p> Lotemax-(Pink) ');
+var n = n.replace(' PF ', ' <h1 style="color:Pink;"><p> Pred Forte-(Prednisolone, Pink) ');
+var n = n.replace(' Pred Forte ', ' <h1 style="color:Pink;"><p> Pred Forte-(Prednisolone, Pink) ');
+var n = n.replace(' Pred Mild ', ' <h1 style="color:Pink;"><p> Pred Mild-(Prednisolone, Pink) ');
+var n = n.replace(' Prednisone ', ' <h1> Prednisone-(Tablet) ');
+var n = n.replace(' Prednisolone ', '<h1 style="color:Pink;"><p> Prednisolone-(Pink) ');
+var n = n.replace(' Rimexolone ', ' <h1 style="color:Pink;"><p> Rimexolone-(Pink) ');
+var n = n.replace(' difluprednate ', ' <h1 style="color:Pink;"><p> Durezol-(Difluprednate, Pink) ');
+var n = n.replace(' durezol ', ' <h1 style="color:Pink;"><p> Durezol-(Difluprednate, Pink) ');
+var n = n.replace(' dexamethasone ', ' <h1> Dexamethasone-(Compounded) ');
+var n = n.replace(' fluorometholone ', ' <h1 style="color:Pink;"><p> Fluorometholone-(Pink) ');
+var n = n.replace(' fml ', ' <h1 style="color:Pink;"><p> Fluorometholone-(Pink) ');
+var n = n.replace(' loteprednol ', ' <h1 style="color:Pink;"><p> Loteprednol-(Pink) ');
+var n = n.replace(' lotemax ', ' <h1 style="color:Pink;"><p> Lotemax-(Pink) ');
+var n = n.replace(' pf ', ' <h1 style="color:Pink;"><p> Pred Forte-(Prednisolone, Pink) ');
+var n = n.replace(' pred forte ', ' <h1 style="color:Pink;"><p> Pred Forte-(Prednisolone, Pink) ');
+var n = n.replace(' pred mild ', ' <h1 style="color:Pink;"><p> Pred Mild-(Prednisolone, Pink) ');
+var n = n.replace(' prednisone ', ' <h1> Prednisone-(Tablet) ');
+var n = n.replace(' prednisolone ', '<h1 style="color:Pink;"><p> Prednisolone-(Pink) ');
+var n = n.replace(' rimexolone ', ' <h1 style="color:Pink;"><p> Rimexolone-(Pink) '); /*END OF FILE, DELETE THIS LINE*/
+ 
+ /* Abbreviations/Immunosuppressants.txt  */
+ 
+var n = n.replace(' Acthar ', ' <h1><p>Acthar(repository - corticotropin injection) ');
+var n = n.replace(' Methotrexate ', ' <h1><p>Methotrexate-Pill ');
+var n = n.replace(' MTX ', ' <h1><p>Methotrexate-Pill '); /*END OF FILE, DELETE THIS LINE*/
+ 
+ /* Abbreviations/Glaucoma.txt  */
+ 
+var n = n.replace(' Azopt ', '  <h1 style="color:Orange;"><p>Azopt(Brinzolamide-Orange) ');
+var n = n.replace(' Acetazolamide ', '<h1><p>Diamox(Acetazolamide)-Pill ');
+var n = n.replace(' Betaxolol ', ' <h1><p>Betaxolol- ');
+var n = n.replace(' Bimatoprost ', '  <h1 style="color:Green;"><p>Bimatoprost(Green) ');
+var n = n.replace(' Brim ', ' <h1 style="color:Purple;"><p>Brimonidine(Purple) ');
+var n = n.replace(' Brimonidine/Brinzolamide ', '  <h1 style="color:Green;"><p>Simbrinza(Brimonidine/Brinzolamide-Green) ');
+var n = n.replace(' Brimonidine/Timolol', '  <h1 style="color:Blue;"><p>Combigan(Brimonidine/Timolol-Blue) ');
+var n = n.replace(' Brimonidine', '  <h1 style="color:Purple;"><p>Brimonidine(Purple) ');
+var n = n.replace(' Brinzolamide ', '   <h1 style="color:Orange;"><p>Azopt(Brinzolamide-Orange) ');
+var n = n.replace(' Combigan ', '  <h1 style="color:Blue;"><p> Combigan(Brimonidine/Timolol-Blue) ');
+var n = n.replace(' Cosopt ', '  <h1 style="color:Blue;"><p> Cosopt(Dorzolamide/Timolol-Blue) ');
+var n = n.replace(' Dorzolamide ', '  <h1 style="color:Orange;"><p> Trusopt(Dorzolamide-Orange) ');
+var n = n.replace(' Latanoprost ', '  <h1 style="color:Green;"><p> Xalatan(Latanoprost-Green) ');
+var n = n.replace(' Lat ', '  <h1 style="color:Green;"><p> Latanoprost(Green) ');
+var n = n.replace(' Latanoprost/Netarsudil ', ' <h1> Rocklatan(Latanoprost/Netarsudil-White) ');
+var n = n.replace(' Latanoprostene ', '  <h1 style="color:Green;"><p> Vyzulta(Latanoprostene-Green) ');
+var n = n.replace(' Methazolamide ', '<h1><p>Methazolamide-Pill ');
+var n = n.replace(' Netarsudil ', ' <h1><p>Rhopressa(Netarsudil-White) ');
+var n = n.replace(' Pilocarpine ', '  <h1 style="color:Green;"><p> Pilocarpine(Green) ');
+var n = n.replace(' Pilo ', '  <h1 style="color:Green;"><p> Pilocarpine(Green) ');
+var n = n.replace(' Timolol ', '  <h1 style="color:Yellow;"><p> Timolol(Yellow) ');
+var n = n.replace(' Tim ', '  <h1 style="color:Yellow;"><p> Timolol(Yellow) ');
+var n = n.replace(' Tafluprost ', '<h1><p>Zioptan(Tafluprost-Pipette) ');
+var n = n.replace(' Xalatan ', ' <h1 style="color:Green;"><p> Xalatan(Latanoprost-Green) ');
+var n = n.replace(' Zioptan ', ' <h1><p>Zioptan(Tafluprost-Pipette) ');
+var n = n.replace(' azopt ', '  <h1 style="color:Orange;"><p>  Azopt(Brinzolamide-Orange) ');
+var n = n.replace(' acetazolamide ', '<h1><p>Diamox(Acetazolamide)-Pill ');
+var n = n.replace(' betaxolol ', ' <h1><p>Betaxolol- ');
+var n = n.replace(' bimatoprost ', '  <h1 style="color:Green;"><p> Bimatoprost(Green) ');
+var n = n.replace(' brim ', ' <h1 style="color:Purple;"><p> Brimonidine(Purple) ');
+var n = n.replace(' brimonidine/Brinzolamide ', '  <h1 style="color:Green;"><p> Simbrinza(Brimonidine/Brinzolamide-Green) ');
+var n = n.replace(' brimonidine/Timolol', '  <h1 style="color:Blue;"><p> Combigan(Brimonidine/Timolol-Blue) ');
+var n = n.replace(' brimonidine', '  <h1 style="color:Purple;"><p> Brimonidine(Purple) ');
+var n = n.replace(' brinzolamide ', '   <h1 style="color:Orange;"><p> Azopt(Brinzolamide-Orange) ');
+var n = n.replace(' combigan ', '  <h1 style="color:Blue;"><p> Combigan(Brimonidine/Timolol-Blue) ');
+var n = n.replace(' cosopt ', '  <h1 style="color:Blue;"><p> Cosopt(Dorzolamide/Timolol-Blue) ');
+var n = n.replace(' dorzolamide ', '  <h1 style="color:Orange;"><p> Trusopt(Dorzolamide-Orange) ');
+var n = n.replace(' latanoprost ', '  <h1 style="color:Green;"><p> Xalatan(Latanoprost-Green) ');
+var n = n.replace(' lat ', '  <h1 style="color:Green;"><p> Latanoprost(Green) ');
+var n = n.replace(' latanoprost/Netarsudil ', ' <h1><p>Rocklatan(Latanoprost/Netarsudil-White) ');
+var n = n.replace(' latanoprostene ', '  <h1 style="color:Green;"><p> Vyzulta(Latanoprostene-Green) ');
+var n = n.replace(' methazolamide ', ' <h1><p>Methazolamide-Pill ');
+var n = n.replace(' netarsudil ', ' <h1><p>Rhopressa(Netarsudil-White) ');
+var n = n.replace(' pilocarpine ', '  <h1 style="color:Green;"><p> Pilocarpine(Green) ');
+var n = n.replace(' pilo ', '  <h1 style="color:Green;"><p> Pilocarpine(Green) ');
+var n = n.replace(' timolol ', '  <h1 style="color:Yellow;"><p> Timolol(Yellow) ');
+var n = n.replace(' tim ', '  <h1 style="color:Yellow;"><p> Timolol(Yellow) ');
+var n = n.replace(' tafluprost ', '<h1><p>Zioptan(Tafluprost-Pipette) ');
+var n = n.replace(' xalatan ', ' <h1 style="color:Green;"><p> Xalatan(Latanoprost-Green) ');
+var n = n.replace(' zioptan ', ' <h1><p> Zioptan(Tafluprost-Pipette) '); /*END OF FILE, DELETE THIS LINE*/
+ 
+ /* Abbreviations/Dryeye.txt  */
+ 
+var n = n.replace(' AFT ', ' <h1><p>Artificial tears ');
+var n = n.replace(' Doxycycline ', ' <h1><p>Doxycycline-Pill ');
+var n = n.replace(' Doxy ', ' <h1> Doxycycline-Pill ');
+var n = n.replace(' LS ', ' <h1><p>Lid Scrubs (Occusoft or Baby Shampoo) ');
+var n = n.replace(' Ointment ', ' <h1><p>Ointment- ');
+var n = n.replace(' PFAFT ', ' <h1><p>Preservative Free Artificial Tears (in Pipettes) ');
+var n = n.replace(' PRGF ', ' <h1><p>Plasma Rich Growth Factor-Compounded in Dr. Perez Clinic ');
+var n = n.replace(' Serum Tears ', ' <h1><p>Serum Tears-Compounded at Central Pharmacy ');
+var n = n.replace(' Ung ', ' <h1><p>Ointment- ');
+var n = n.replace(' WC ', ' <h1><p>Warm Compresses-5 minutes with cloth/pad ');
+var n = n.replace(' aft ', ' <h1><p>Artificial tears ');
+var n = n.replace(' doxycycline ', ' <h1><p>Doxycycline-Pill ');
+var n = n.replace(' doxy ', ' <h1> Doxycycline-Pill ');
+var n = n.replace(' ls ', ' <h1><p>Lid Scrubs (Occusoft or Baby Shampoo) ');
+var n = n.replace(' ointment ', ' <h1><p>Ointment- ');
+var n = n.replace(' pfaft ', ' <h1><p>Preservative Free Artificial Tears (in Pipettes) ');
+var n = n.replace(' prgf ', ' <h1><p>Plasma Rich Growth Factor-Compounded in Dr. Perez Clinic ');
+var n = n.replace(' Serum tears ', ' <h1><p>Serum Tears-Compounded at Central Pharmacy ');
+var n = n.replace(' ung ', ' <h1><p>Ointment- ');
+var n = n.replace(' wc ', ' <h1><p>Warm Compresses-5 minutes with cloth/pad '); /*END OF FILE, DELETE THIS LINE*/
+ 
+ /* Abbreviations/Antibiotics.txt  */
+ 
+var n = n.replace(' Azithromycin ', ' <h1><p>Azithromycin- ');
+var n = n.replace(' AzaSite ', ' <h1><p>Azithromycin- ');
+var n = n.replace(' Bacitracin ', ' <h1><p>Bacitracin- ');
+var n = n.replace(' Bacitracin/Polymyxin B1 ', ' <h1><p>Bacitracin/Polymyxin B1- ');
+var n = n.replace(' Besifloxacin ', ' <h1 style="color:Tan;"><p>Besifloxacin(Tan) ');
+var n = n.replace(' Besivance ', '  <h1 style="color:Tan;"><p>Besifloxacin(Tan) ');
+var n = n.replace(' Ciprofloxacin ', ' <h1><p>Ciprofloxacin- ');
+var n = n.replace(' Ciloxan ', ' <h1><p>Ciprofloxacin- ');
+var n = n.replace(' Erythromycin ', ' <h1><p>Erythromycin(Tube) ');
+var n = n.replace(' Gatifloxacin ', ' <h1><p>Gatifloxacin(Tan) ');
+var n = n.replace(' Gentamicin ', ' <h1><p>Gentamicine- ');
+var n = n.replace(' Levofloxacin ', ' <h1><p>Levofloxacin- ');
+var n = n.replace(' Levaquin ', ' <h1><p>Levofloxacin- ');
+var n = n.replace(' Moxifloxacin ', ' <h1 style="color:Tan;"><p>Moxifloxacin(Tan) ');
+var n = n.replace(' Neomycin/Polymyxin B/Bacitracin ', ' <h1><p>Neomycin/Polymyxin B/Bacitracin- ');
+var n = n.replace(' Neomycin/Polymyxin B/Gramicidin21,22 ', ' <h1><p>Neomycin/Polymyxin B/Gramicidin21,22- ');
+var n = n.replace(' Ofloxacin ', ' <h1 style="color:Tan;"><p>Ofloxacin- ');
+var n = n.replace(' Polymyxin B /Trimethoprim ', ' <h1><p>Polymyxin B /Trimethoprim- ');
+var n = n.replace(' Polytrim ', ' <h1><p>Polymyxin B /Trimethoprim- ');
+var n = n.replace(' Sulfacetamide ', ' <h1><p>Sulfacetamide- ');
+var n = n.replace(' Tobramycin ', ' <h1><p>Tobramycin-Fortified ');
+var n = n.replace(' Tobra ', ' <h1><p>Tobramycin-Fortified ');
+var n = n.replace(' Vancomycin ', ' <h1><p>Vancomycin-Fortified ');
+var n = n.replace(' Vanco ', ' <h1><p>Vancomycin-Fortified ');
+var n = n.replace(' Vigamox ', ' <h1 style="color:Tan;"><p>Vigamox(Tan)- ');
+var n = n.replace(' azithromycin ', ' <h1><p>Azithromycin- ');
+var n = n.replace(' azaSite ', '<h1><p>Azithromycin- ');
+var n = n.replace(' bacitracin ', '<h1><p>Bacitracin- ');
+var n = n.replace(' bacitracin/Polymyxin B1 ', '<h1><p>Bacitracin/Polymyxin B1- ');
+var n = n.replace(' besifloxacin ', ' <h1 style="color:Tan;"><p>Besifloxacin(Tan) ');
+var n = n.replace(' besivance ', ' <h1 style="color:Tan;"><p>Besifloxacin(Tan) ');
+var n = n.replace(' ciprofloxacin ', '<h1><p>Ciprofloxacin- ');
+var n = n.replace(' ciloxan ', ' <h1><p>Ciprofloxacin- ');
+var n = n.replace(' erythromycin ', ' <h1><p>Erythromycin(Tube) ');
+var n = n.replace(' gatifloxacin ', ' <h1 style="color:Tan;"><p>Gatifloxacin(Tan) ');
+var n = n.replace(' gentamicin ', '<h1><p>Gentamicin- ');
+var n = n.replace(' levofloxacin ', ' <h1><p>Levofloxacin- ');
+var n = n.replace(' levaquin ', ' <h1><p>Levofloxacin- ');
+var n = n.replace(' moxifloxacin ', ' <h1 style="color:Tan;"><p>Moxifloxacin(Tan) ');
+var n = n.replace(' natamycin ', ' <h1><p>Natamycin- ');
+var n = n.replace(' natacyn ', ' <h1><p>Natamycin- ');
+var n = n.replace(' neomycin/polymyxin B/bacitracin ', '<h1><p>Neomycin/Polymyxin B/Bacitracin- ');
+var n = n.replace(' neomycin/polymyxin B/gramicidin21,22 ', ' <h1><p>Neomycin/Polymyxin B/Gramicidin21,22- ');
+var n = n.replace(' ofloxacin ', ' <h1 style="color:Tan;"><p>Ofloxacin- ');
+var n = n.replace(' polymyxin B /trimethoprim ', ' <h1><p>Polymyxin B /Trimethoprim- ');
+var n = n.replace(' polytrim ', ' <h1><p>Polymyxin B /Trimethoprim- ');
+var n = n.replace(' sulfacetamide ', ' <h1><p>sulfacetamide- ');
+var n = n.replace(' tobramycin ', ' <h1><p>Tobramycin-Fortified- ');
+var n = n.replace(' vancomycin ', ' <h1><p>Vancomycin-Fortified- ');
+var n = n.replace(' vanco ', ' <h1><p>Vancomycin-Fortified- ');
+var n = n.replace(' vigamox ', ' <h1 style="color:Tan;"><p>Vigamox(Tan) ');
+var n = n.replace(' tobra ', ' <h1><p>Tobramycin-Fortified '); /*END OF FILE, DELETE THIS LINE*/
+ 
+ /* Abbreviations/Antifungals.txt  */
+ 
+var n = n.replace(' Natamycin ', '<h1><p>Natamycin ');
+var n = n.replace(' Amphotericin ', '<h1><p>Amphotericin ');
+var n = n.replace(' Cyclosporin ', ' <h1><p>Cyclosporin ');
+var n = n.replace(' Voriconazole ', ' <h1><p>Voriconazole ');
+var n = n.replace(' Fluconazole ', ' <h1><p>Fluconazole ');
+var n = n.replace(' natamycin ', ' <h1><p>Natamycin ');
+var n = n.replace(' amphotericin ', ' <h1><p>Amphotericine ');
+var n = n.replace(' cyclosporin ', ' <h1><p>Cyclosporin ');
+var n = n.replace(' voriconazole', ' <h1><p>Voriconazole ');
+var n = n.replace(' fluconazole ', ' <h1><p>Fluconazole ');
+var n = n.replace(' Nata ', ' <h1><p>Natamycin ');
+var n = n.replace(' Ampho ', ' <h1><p>Amphotericin ');
+var n = n.replace(' nata ', ' <h1><p>Natamycin ');
+var n = n.replace(' ampho ', ' <h1><p>Amphotericin ');
+var n = n.replace(' CSA ', ' <h1><p>Compouded Cycylosporin 20mg/ml ');
+var n = n.replace(' csa ', ' <h1><p>Compouded Cycylosporin 20mg/ml '); /*END OF FILE, DELETE THIS LINE*/
+ 
+ /* Abbreviations/Quantities.txt  */
+ 
+var n = n.replace(' GM', ' Gram ');
+var n = n.replace(' MG', ' Milligrams ');
+var n = n.replace(' GTT', ' Drop ');
+var n = n.replace(' gm', ' Gram ');
+var n = n.replace(' mg', ' Milligrams ');
+var n = n.replace(' gtt', ' Drop '); /*END OF FILE, DELETE THIS LINE*/
+ 
+ /* Abbreviations/Formatting.txt  */
+ 
+var n = n.replace(' ,', '  '); /*END OF FILE, DELETE THIS LINE*/
+ 
+ /* Abbreviations/Frequencies.txt  */
+ 
+var n = n.replace(' QOW', ' Everyother Week ');
+var n = n.replace(' QW', ' Every Week ');
+var n = n.replace(' Q3D', ' Every 3 Days ');
+var n = n.replace(' Q2D', ' Every 2 Days ');
+var n = n.replace(' QOD', ' Everyother Day ');
+var n = n.replace(' QD', ' Every Day ');
+var n = n.replace(' QHS', ' At Bedtime ');
+var n = n.replace(' QAM', ' In The Morning ');
+var n = n.replace(' QPM', ' At Night ');
+var n = n.replace(' BID', ' Twice Daily (8am, 8pm) ');
+var n = n.replace(' Q12H', ' Twice Daily (8am, 8pm) ');
+var n = n.replace(' TID', ' Three Times Daily (8am, 12pm, 8pm) ');
+var n = n.replace(' Q8H', ' Three Times Daily (8am, 12pm, 8pm) ');
+var n = n.replace(' QID', ' Four Times Daily  (8am, 12pm, 4pm, 8pm) ');
+var n = n.replace(' Q6H', ' Four Times Daily  (8am, 12pm, 4pm, 8pm) ');
+var n = n.replace(' Q4H', ' Every Four Hours (8am, 12 pm, 4 pm, 8pm) ');
+var n = n.replace(' Q3H', ' Every Three Hours (8 am, 11 am, 2 pm, 5 pm, 8 pm) ');
+var n = n.replace(' Q2H', ' Every Two Hours (8 am, 10 am, 12 pm, 2 pm, 4 pm, 6 pm, 8 pm) ');
+var n = n.replace(' Q1H', ' Every Hour ');
+var n = n.replace(' Q30M', ' Every 30 Minutes ');
+var n = n.replace(' Q15M', ' Every Fifteen Minutes ');
+var n = n.replace(' Q10M', ' Every Ten Minutes ');
+var n = n.replace(' Q5M', ' Every Five Minutes ');
+var n = n.replace(' Q1M', ' Every Minute ');
+var n = n.replace(' qow', ' Everyother Week ');
+var n = n.replace(' qw', ' Every Week ');
+var n = n.replace(' q3d', ' Every 3 Days ');
+var n = n.replace(' q2d', ' Every 2 Days ');
+var n = n.replace(' qod', ' Everyother Day ');
+var n = n.replace(' qd', ' Every Day ');
+var n = n.replace(' qhs', ' At Bedtime ');
+var n = n.replace(' qam', ' In The Morning ');
+var n = n.replace(' qpm', ' At Night ');
+var n = n.replace(' bid', ' Twice Daily (8am, 8pm) ');
+var n = n.replace(' q12h', ' Twice Daily (8am, 8pm) ');
+var n = n.replace(' tid', ' Three Times Daily (8am, 12pm, 8pm) ');
+var n = n.replace(' q8h', ' Three Times Daily (8am, 12pm, 8pm) ');
+var n = n.replace(' qid', ' Four Times Daily  (8am, 12pm, 4pm 8pm) ');
+var n = n.replace(' q6h', ' Four Times Daily  (8am, 12pm, 4pm 8pm) ');
+var n = n.replace(' q4h', ' Every Four Hours (8am, 12 pm, 4 pm, 8pm) ');
+var n = n.replace(' q3h', ' Every Three Hours (8 am, 11 am, 2 pm, 5 pm, 8 pm) ');
+var n = n.replace(' q2h', ' Every Two Hours (8 am, 10 am, 12 pm, 2 pm, 4 pm, 6 pm, 8 pm) ');
+var n = n.replace(' q1h', ' Every Hour ');
+var n = n.replace(' q30m', ' Every 30 Minutes ');
+var n = n.replace(' q15m', ' Every Fifteen Minutes ');
+var n = n.replace(' q10m', ' Every Ten Minutes ');
+var n = n.replace(' q5m', ' Every Five Minutes ');
+var n = n.replace(' q1m', ' Every Minute ');
+var n = n.replace(' ----', ' Alternative ');
+var n = n.replace(' 1XW', ' One time a week ');
+var n = n.replace(' 2XW', ' Two times a week ');
+var n = n.replace(' 3XW', ' Three times a week ');
+var n = n.replace(' 1XD', ' One time a day (AM or PM) ');
+var n = n.replace(' 2XD', ' Two times a day (AM and PM) ');
+var n = n.replace(' 3XD', ' Three times a day (8am, 12pm, 8pm) ');
+var n = n.replace(' 4XD', ' Four times a day (8am, 12pm, 4pm, 8pm) ');
+var n = n.replace(' 5XD', ' Five times a day or every 3 hours (8 am, 11 am, 2 pm, 5 pm, 8 pm) ');
+var n = n.replace(' 6XD', ' Six times a day (8 am, 10 am, 12 pm, 2 pm, 4 pm, 8 pm) ');
+var n = n.replace(' WT', ' <h1><i> Weekly taper (Decrease by one drop per day every week, for example 4 drops a day for 1 week then 3 drops a day for 1 week etc) </h1></i> ');
+var n = n.replace(' BWT', ' <h1><i> Bi-Weekly taper (Decrease by one drop per day every 2 weeks, for example 4 drops a day for 2 weeks then 3 drops a day for 2 weeks etc) </h1></i> ');
+var n = n.replace(' 1xW', ' One time a week ');
+var n = n.replace(' 2xW', ' Two times a week ');
+var n = n.replace(' 3xW', ' Three times a week ');
+var n = n.replace(' 1xD', ' One time a day (AM or PM) ');
+var n = n.replace(' 2xD', ' Two times a day (AM and PM) ');
+var n = n.replace(' 3xD', ' Three times a day (8am, 12pm, 8pm) ');
+var n = n.replace(' 4xD', ' Four times a day (8am, 12pm, 4pm, 8pm) ');
+var n = n.replace(' 5xD', ' Five times a day or every 3 hours (8 am, 11 am, 2 pm, 5 pm, 8 pm) ');
+var n = n.replace(' 6xD', ' Six times a day (8 am, 10 am, 12 pm, 2 pm, 4 pm, 8 pm) ');
+var n = n.replace(' wt', ' <h1><i> Weekly taper (Decrease by one drop per day every week, for example 4 drops a day for 1 week then 3 drops a day for 1 week etc) </h1></i> ');
+var n = n.replace(' bwt', ' <h1><i> Bi-Weekly taper (Decrease by one drop per day every 2 weeks, for example 4 drops a day for 2 weeks then 3 drops a day for 2 weeks etc) </h1></i> ');
+var n = n.replace(' 1xw', ' One time a week ');
+var n = n.replace(' 2xw', ' Two times a week ');
+var n = n.replace(' 3xw', ' Three times a week ');
+var n = n.replace(' 1xd', ' One time a day (AM or PM) ');
+var n = n.replace(' 2xd', ' Two times a day (AM and PM) ');
+var n = n.replace(' 3xd', ' Three times a day (8am, 12pm, 8pm) ');
+var n = n.replace(' 4xd', ' Four times a day (8am, 12pm, 4pm, 8pm) ');
+var n = n.replace(' 5xd', ' Five times a day or every 3 hours (8 am, 11 am, 2 pm, 5 pm, 8 pm) ');
+var n = n.replace(' 6xd', ' Six times a day (8 am, 10 am, 12 pm, 2 pm, 4 pm, 8 pm) '); /*END OF FILE, DELETE THIS LINE*/
+ 
+ /* Abbreviations/  */
+ 
+ 
+ /* HTMLtemplates/HTMLD.txt  */
+ 
+}
+    
+        }
+  
+  
+    /*  document.getElementById("drops1").innerHTML = drops;*/
+      document.getElementById("drops2").innerHTML = n;
+      document.getElementById("demo").innerHTML = "<h1><br><br><u>Instructions</u> <br>Please place 1 drop in the eye and wait 5 minutes inbetween drops <br> Call immediately for decreased vision, increasing pain or redness. <br> Color denotes the color of the top.";
+      
+      
+      
+  /*document.getElementById("demo").innerHTML =
+    i;*/
+  
+  
+  
+    }
+    
+    
+    
+    
+    
+    
+  
+
+</script>
+
+</body>
+</html>

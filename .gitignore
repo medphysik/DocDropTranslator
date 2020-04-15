@@ -1,0 +1,4 @@
+venvHeroku
+*.pyc
+.DS_Store
+.env
